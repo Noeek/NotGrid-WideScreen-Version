@@ -14,435 +14,453 @@ end
 
 local menuarray = {
 	--flavortext, booleantoggle, currvalueforslider, currecntvalueforeditbox, currvalueforcolor
-	{text = L["Config Mode"],
-	toggle = "configmode",
+	{
+		text = L["Config Mode"],
+		toggle = "configmode",
 	},
 
-	{text = "",},
+	{ text = "", },
 
-	{text = L["Position"],
-	position = {
-		xkey = "containeroffx",
-		ykey = "containeroffy",
+	{
+		text = L["Position"],
+		position = {
+			xkey = "containeroffx",
+			ykey = "containeroffy",
 		},
-	},
-	{text = L["Draggable"],
-		toggle = "draggable",
-		conflict = {smartcenter = true,containeroffx = true,},
-		tooltip = L["draggable_tooltip"],
 	},
 
-	{text = "",},
+	{ text = "", },
 
-	{text = L["Unit Width"], 
-	slider = {
-		key = "unitwidth",
-		minval = 1,
-		maxval = 100,
+	{
+		text = L["Unit Width"],
+		slider = {
+			key = "unitwidth",
+			minval = 1,
+			maxval = 100,
 		},
 	},
-	{text = L["Unit Height"], 
-	slider = {
-		key = "unitheight",
-		minval = 1,
-		maxval = 100,
+	{
+		text = L["Unit Height"],
+		slider = {
+			key = "unitheight",
+			minval = 1,
+			maxval = 100,
 		},
 	},
-	{text = L["Unit Border"], 
-	slider = {
-		key = "unitborder",
-		minval = 1,
-		maxval = 20,
+	{
+		text = L["Unit Border"],
+		slider = {
+			key = "unitborder",
+			minval = 1,
+			maxval = 20,
 		},
-	color = {
+		color = {
 			key = "unitbordercolor",
 		},
 	},
-	{text = L["Border Artwork"],
-	toggle = "borderartwork",
+	{
+		text = L["Border Artwork"],
+		toggle = "borderartwork",
 	},
-	{text = L["Unit Padding"], 
-	slider = {
-		key = "unitpadding",
-		minval = -20,
-		maxval = 20,
+	{
+		text = L["Unit Padding"],
+		slider = {
+			key = "unitpadding",
+			minval = -20,
+			maxval = 20,
 		},
 	},
-	{text = L["Font"],
-	editbox = {
-		key = "unitfont",
+	{
+		text = L["Font"],
+		editbox = {
+			key = "unitfont",
 		},
 	},
-	{text = L["Texture"],
-	editbox = {
-		key = "unithealthbartexture",
+	{
+		text = L["Texture"],
+		editbox = {
+			key = "unithealthbartexture",
 		},
 	},
-	{text = L["Background"],
-	color = {
+	{
+		text = L["Background"],
+		color = {
 			key = "unitbgcolor",
 		},
 	},
-	{text = L["Name Size"],
-	slider = {
-		key = "unitnamehealthtextsize",
-		minval = 1,
-		maxval = 20,
+	{
+		text = L["Name Size"],
+		slider = {
+			key = "unitnamehealthtextsize",
+			minval = 1,
+			maxval = 20,
 		},
 	},
-	{text = L["Name Length"],
-	slider = {
-		key = "namelength",
-		minval = 1,
-		maxval = 12,
+	{
+		text = L["Name Length"],
+		slider = {
+			key = "namelength",
+			minval = 1,
+			maxval = 12,
 		},
 	},
-	{text = L["Name Position"],
-	position = {
-		xkey = "unitnamehealthoffx",
-		ykey = "unitnamehealthoffy",
+	{
+		text = L["Name Position"],
+		position = {
+			xkey = "unitnamehealthoffx",
+			ykey = "unitnamehealthoffy",
 		},
 	},
-	{text = L["Name Color"],
-	toggle = "colorunitnamehealthbyclass",
-	color = {
+	{
+		text = L["Name Color"],
+		toggle = "colorunitnamehealthbyclass",
+		color = {
 			key = "unitnamehealthtextcolor",
 		},
-	tooltip = L["classcolor_tooltip"],
+		tooltip = L["classcolor_tooltip"],
 	},
-	{text = L["Health Color"],
-	toggle = "colorunithealthbarbyclass",
-	color = {
+	{
+		text = L["Health Color"],
+		toggle = "colorunithealthbarbyclass",
+		color = {
 			key = "unithealthbarcolor",
 		},
-	tooltip = L["classcolor_tooltip"],
+		tooltip = L["classcolor_tooltip"],
 	},
-	{text = L["Health Background"],
-	editbox = {
-		key = "unithealthbarbgtexture",
+	{
+		text = L["Health Background"],
+		editbox = {
+			key = "unithealthbarbgtexture",
 		},
-	toggle = "colorunithealthbarbgbyclass",
-	color = {
+		toggle = "colorunithealthbarbgbyclass",
+		color = {
 			key = "unithealthbarbgcolor",
 		},
-	tooltip = L["classcolor_tooltip"],
+		tooltip = L["classcolor_tooltip"],
 	},
-	{text = L["Health Orientation"],
-	slider = {
-		key = "unithealthorientation",
-		minval = 1,
-		maxval = 2,
+	{
+		text = L["Health Orientation"],
+		slider = {
+			key = "unithealthorientation",
+			minval = 1,
+			maxval = 2,
 		},
 	},
-	{text = L["Health Threshold"],
-	slider = {
-		key = "healththreshhold",
-		minval = 1,
-		maxval = 100,
+	{
+		text = L["Health Threshold"],
+		slider = {
+			key = "healththreshhold",
+			minval = 1,
+			maxval = 100,
 		},
-	tooltip = L["healththreshold_tooltip"],
+		tooltip = L["healththreshold_tooltip"],
 	},
 
-	{text = "",},
+	{ text = "", },
 
-	{text = L["Show Power Bar"],
-	toggle = "showpowerbar",
+	{
+		text = L["Show Power Bar"],
+		toggle = "showpowerbar",
 	},
-	{text = L["Power Background"],
-	toggle = "colorpowerbarbgbytype",
-	tooltip = L["powercolor_tooltip"],
-	color = {
+	{
+		text = L["Power Background"],
+		toggle = "colorpowerbarbgbytype",
+		tooltip = L["powercolor_tooltip"],
+		color = {
 			key = "unitpowerbarbgcolor",
 		},
 	},
-	{text = L["Power Position"],
-	slider = {
-		key = "powerposition",
-		minval = 1,
-		maxval = 4,
+	{
+		text = L["Power Position"],
+		slider = {
+			key = "powerposition",
+			minval = 1,
+			maxval = 4,
 		},
 	},
-	{text = L["Power Size"],
-	slider = {
-		key = "powersize",
-		minval = 1,
-		maxval = 50,
+	{
+		text = L["Power Size"],
+		slider = {
+			key = "powersize",
+			minval = 1,
+			maxval = 50,
 		},
 	},
-
-
-	{text = "",},
 
 	-- Icons --
 
-	{text = L["Icon Size"],
-	slider = {
-		key = "unittrackingiconsize",
-		minval = 1,
-		maxval = 30,
+	{
+		text = L["Icon Size"],
+		slider = {
+			key = "unittrackingiconsize",
+			minval = 1,
+			maxval = 30,
 		},
 	},
-	{text = L["Top Left Icon"],
-	toggle = "trackingicon1invert",
-	editbox = {
-		key = "trackingicon1",
+	{
+		text = L["Top Left Icon"],
+		editbox = {
+			key = "trackingicon1",
 		},
-	color = {
-		key = "trackingicon1color",
+		color = {
+			key = "trackingicon1color",
 		},
-	tooltip = L["icon_tooltip"],
 	},
-	{text = L["Top Icon"],
-	toggle = "trackingicon2invert",
-	editbox = {
-		key = "trackingicon2",
+	{
+		text = L["Top Icon"],
+		editbox = {
+			key = "trackingicon2",
 		},
-	color = {
-		key = "trackingicon2color",
+		color = {
+			key = "trackingicon2color",
 		},
-	tooltip = L["icon_tooltip"],
 	},
-	{text = L["Top Right Icon"],
-	toggle = "trackingicon3invert",
-	editbox = {
-		key = "trackingicon3",
+	{
+		text = L["Top Right Icon"],
+		editbox = {
+			key = "trackingicon3",
 		},
-	color = {
-		key = "trackingicon3color",
+		color = {
+			key = "trackingicon3color",
 		},
-	tooltip = L["icon_tooltip"],
 	},
-	{text = L["Right Icon"],
-	toggle = "trackingicon4invert",
-	editbox = {
-		key = "trackingicon4",
+	{
+		text = L["Right Icon"],
+		editbox = {
+			key = "trackingicon4",
 		},
-	color = {
-		key = "trackingicon4color",
+		color = {
+			key = "trackingicon4color",
 		},
-	tooltip = L["icon_tooltip"],
 	},
-	{text = L["Bottom Right Icon"],
-	toggle = "trackingicon5invert",
-	editbox = {
-		key = "trackingicon5",
+	{
+		text = L["Bottom Right Icon"],
+		editbox = {
+			key = "trackingicon5",
 		},
-	color = {
-		key = "trackingicon5color",
+		color = {
+			key = "trackingicon5color",
 		},
-	tooltip = L["icon_tooltip"],
 	},
-	{text = L["Bottom Icon"],
-	toggle = "trackingicon6invert",
-	editbox = {
-		key = "trackingicon6",
+	{
+		text = L["Bottom Icon"],
+		editbox = {
+			key = "trackingicon6",
 		},
-	color = {
-		key = "trackingicon6color",
+		color = {
+			key = "trackingicon6color",
 		},
-	tooltip = L["icon_tooltip"],
 	},
-	{text = L["Bottom Left Icon"],
-	toggle = "trackingicon7invert",
-	editbox = {
-		key = "trackingicon7",
+	{
+		text = L["Bottom Left Icon"],
+		editbox = {
+			key = "trackingicon7",
 		},
-	color = {
-		key = "trackingicon7color",
+		color = {
+			key = "trackingicon7color",
 		},
-	tooltip = L["icon_tooltip"],
 	},
-	{text = L["Left Icon"],
-	toggle = "trackingicon8invert",
-	editbox = {
-		key = "trackingicon8",
+	{
+		text = L["Left Icon"],
+		editbox = {
+			key = "trackingicon8",
 		},
-	color = {
-		key = "trackingicon8color",
+		color = {
+			key = "trackingicon8color",
 		},
-	tooltip = L["icon_tooltip"],
 	},
 	-- end of icons --
-	{text = "",},
+	{ text = "", },
 
-	{text = L["Healcomm Bar"],
-	toggle = "showhealcommbar",
-	color = {
+	{
+		text = L["Healcomm Bar"],
+		toggle = "showhealcommbar",
+		color = {
 			key = "unithealcommbarcolor",
 		},
 	},
-	{text = L["Healcomm Text"],
-	toggle = "showhealcommtext",
-	slider = {
-		key = "unithealcommtextsize",
-		minval = 1,
-		maxval = 20,
+	{
+		text = L["Healcomm Text"],
+		toggle = "showhealcommtext",
+		slider = {
+			key = "unithealcommtextsize",
+			minval = 1,
+			maxval = 20,
 		},
-	color = {
+		color = {
 			key = "unithealcommtextcolor",
 		},
 	},
-	{text = L["Healcomm Text Position"],
-	position = {
-		xkey = "unithealcommtextoffx",
-		ykey = "unithealcommtextoffy",
+	{
+		text = L["Healcomm Text Position"],
+		position = {
+			xkey = "unithealcommtextoffx",
+			ykey = "unithealcommtextoffy",
 		},
 	},
 
-	{text = "",},
+	{ text = "", },
 
-	{text = L["Highlight Target"],
-	toggle = "tracktarget",
-	color = {
+	{
+		text = L["Highlight Target"],
+		toggle = "tracktarget",
+		color = {
 			key = "targetcolor",
 		},
 	},
 
-	{text = L["Aggro Warning"],
-	toggle = "trackaggro",
-	color = {
+	{
+		text = L["Aggro Warning"],
+		toggle = "trackaggro",
+		color = {
 			key = "aggrowarningcolor",
 		},
 	},
 
-	{text = L["Mana Warning"],
-	toggle = "trackmana",
-	slider = {
-		key = "manathreshhold",
-		minval = 1,
-		maxval = 100,
+	{
+		text = L["Mana Warning"],
+		toggle = "trackmana",
+		slider = {
+			key = "manathreshhold",
+			minval = 1,
+			maxval = 100,
 		},
-	tooltip = L["manathreshhold_tooltip"],
-	color = {
+		tooltip = L["manathreshhold_tooltip"],
+		color = {
 			key = "manawarningcolor",
 		},
 	},
 
-	{text = "",},
+	{ text = "", },
 
-	{text = L["Use Map Proximity"],
-	toggle = "usemapdistances",
+	{
+		text = L["Use Map Proximity"],
+		toggle = "usemapdistances",
 	},
-	{text = L["Proximity Rate"],
-	slider = {
-		key = "proximityrate",
-		minval = 0.5,
-		maxval = 5,
-		stepvalue = 0.5,
+	{
+		text = L["Proximity Rate"],
+		slider = {
+			key = "proximityrate",
+			minval = 0.5,
+			maxval = 5,
+			stepvalue = 0.5,
 		},
-	tooltip = L["proximityrate_tooltip"],
+		tooltip = L["proximityrate_tooltip"],
 	},
-	{text = L["Proximity Leeway"], 
-	slider = {
-		key = "proximityleeway",
-		minval = 0,
-		maxval = 30,
+	{
+		text = L["Proximity Leeway"],
+		slider = {
+			key = "proximityleeway",
+			minval = 0,
+			maxval = 30,
 		},
-	tooltip = L["proximityleeway_tooltip"],
+		tooltip = L["proximityleeway_tooltip"],
 	},
 
-	{text = "",},
+	{ text = "", },
 
-	{text = L["Smart Center"], 
-	toggle = "smartcenter",
-	tooltip = L["smartcenter_tooltip"],
+	{
+		text = L["Smart Center"],
+		toggle = "smartcenter",
+		tooltip = L["smartcenter_tooltip"],
 	},
-	{text = L["Growth Direction"], 
-	slider = {
-		key = "growthdirection",
-		minval = 1,
-		maxval = 8,
-		},
-	},
-
-	{text = "",},
-
-	{text = L["Show While Solo"], 
-	toggle = "showwhilesolo",
-	},
-	{text = L["Show In Party"], 
-	toggle = "showinparty",
-	},
-	{text = L["Show Party In Raid"], 
-	toggle = "showpartyinraid",
-	},
-	{text = L["Show Pets"],
-	toggle = "showpets",
-	tooltip = L["pet_tooltip"],
-	},
-	{text = L["Custom Pet Color"],
-	toggle = "usepetcolor",
-	color = {
-		key = "petcolor",
+	{
+		text = L["Growth Direction"],
+		slider = {
+			key = "growthdirection",
+			minval = 1,
+			maxval = 8,
 		},
 	},
-	{text = L["TBC Shaman Color"],
-	toggle = "useshamancolor",
+
+	{ text = "", },
+
+	{
+		text = L["Show While Solo"],
+		toggle = "showwhilesolo",
+	},
+	{
+		text = L["Show In Party"],
+		toggle = "showinparty",
+	},
+	{
+		text = L["Show Party In Raid"],
+		toggle = "showpartyinraid",
+	},
+	{
+		text = L["Show Pets"],
+		toggle = "showpets",
+		tooltip = L["pet_tooltip"],
+	},
+	{
+		text = L["Custom Pet Color"],
+		toggle = "usepetcolor",
+		color = {
+			key = "petcolor",
+		},
+	},
+	{
+		text = L["TBC Shaman Color"],
+		toggle = "useshamancolor",
+	},
+	{
+		text = L["Show Blizz Frames"],
+		toggle = "showblizzframes",
+	},
+	{
+		text = L["Disable Tooltip In Combat"],
+		toggle = "disablemouseoverincombat",
 	},
 
-	{text = "",},
+	{ text = "", },
 
-	{text = L["Show Blizz Frames"], 
-	toggle = "showblizzframes",
+	{
+		text = L["Version Checking"],
+		toggle = "versionchecking",
 	},
-	{text = L["Disable Tooltip In Combat"],
-	toggle = "disablemouseoverincombat",
-	},
-
-	{text = "",},
-
-	{text = L["Version Checking"],
-	toggle = "versionchecking",
-	},
-	{text = L["Clique Hook"],
-	toggle = "cliquehook",
-	reloadui = true,
-	tooltip = L["cliquehook_tooltip"],
+	{
+		text = L["Clique Hook"],
+		toggle = "cliquehook",
+		reloadui = true,
+		tooltip = L["cliquehook_tooltip"],
 	},
 }
 
 
 --variables for dynamic menu
 local buttonheight = 16
-local numdisplay = 30
-
+local numdisplay = 26
+local menuheight = 0
 --------------
 -- Dropdown --
 --------------
 
 function NotGrid:InitializeMenu()
-	local f = CreateFrame("Button","NotGridOptionsMenu",UIParent)
-	f:SetBackdrop({bgFile = "Interface/Tooltips/UI-Tooltip-Background", edgeFile = "Interface/Tooltips/UI-Tooltip-Border", tile = true, tileSize = 16, edgeSize = 16, insets = { left = 4, right = 4, top = 4, bottom = 4 }})
-	f:SetBackdropColor(0,0,0)
-	f:SetWidth(190)
-	f:SetHeight(buttonheight*(numdisplay+3)) -- +3 to offset it from the top
-	f:SetPoint("CENTER",UIParent)
+	local f = CreateFrame("Button", "NotGridOptionsMenu", UIParent)
+	f:SetBackdrop({
+		bgFile = "Interface/Tooltips/UI-Tooltip-Background",
+		edgeFile = "Interface/Tooltips/UI-Tooltip-Border",
+		tile = true,
+		tileSize = 16,
+		edgeSize = 16,
+		insets = { left = 4, right = 4, top = 4, bottom = 4 }
+	})
+	f:SetBackdropColor(0, 0, 0)
+	f:SetWidth(800)
+	menuheight = buttonheight * (numdisplay + 3) -- +3 to offset it from the top	
+	f:SetHeight(menuheight)
+	f:SetPoint("CENTER", UIParent)
 	f:SetMovable(true)
 	f:RegisterForDrag("LeftButton")
-	f:EnableMouseWheel()
-	f.offset = 0 -- for scrolling
+
 	f.fs = f:CreateFontString('$parentTitle', "ARTWORK", "GameFontNormalLarge")
-	f.fs:SetText("NotGrid")
-	f.fs:SetPoint("TOPLEFT",12,-12)
-	f.fsv = f:CreateFontString('$parentVersion', "ARTWORK", "GameFontNormalSmall")
-	f.fsv:SetText("v" .. NotGridOptions.version)
-	f.fsv:SetPoint("TOPLEFT",80,-18)
-	--f.fs:SetTextColor(1,0.29,0.67,1)
-	if NotGridOptions["showmenuhint"] then
-		f.fs:SetText(L["Scroll Me!"])
-		f.fsv:Hide()
+	local titleDisplay = L["Scroll Me!"]
+	if not titleDisplay then
+		titleDisplay = "NotGrid WideScreen Version"
 	end
-	f:SetScript("OnMouseWheel", function()
-		if f.offset >= 5 and NotGridOptions["showmenuhint"] then
-			f.fs:SetText("NotGrid")
-			f.fsv:Show()
-			NotGridOptions["showmenuhint"] = false -- so it wont show it again until a reset to defaults
-		end
-		self:ScrollHandler()
-	end)
-	f:SetScript("OnShow", function()
-		self:ScrollHandler() -- have to run it onshow because all the positioning is done in this func
-	end)
+	f.fs:SetText(titleDisplay)
+	f.fs:SetPoint("TOPLEFT", 12, -12)
+	
 	f:SetScript("OnDragStart", function()
 		NotGridOptionsMenu:StartMoving()
 	end)
@@ -450,33 +468,40 @@ function NotGrid:InitializeMenu()
 		this:StopMovingOrSizing()
 	end)
 	f:Hide()
-	local fx = CreateFrame("Button","$parentXbutton",f,"UIPanelCloseButton")
-	fx:SetPoint("TOPRIGHT",0,0)
+	local fx = CreateFrame("Button", "$parentXbutton", f, "UIPanelCloseButton")
+	fx:SetPoint("TOPRIGHT", 0, 0)
 
-	for key,val in menuarray do
-		local fb = CreateFrame("Button", "$parentbutton"..key, f)
-		fb:SetWidth(140)
+	local fbwidth, offsetx, offsety = 140, 55, 0
+	for key, val in menuarray do
+		local fb = CreateFrame("Button", "$parentbutton" .. key, f)
+		fb:SetWidth(fbwidth)
 		fb:SetHeight(buttonheight)
-		--fb:SetBackdrop({bgFile = "Interface/Tooltips/UI-Tooltip-Background", edgeFile = "Interface/Tooltips/UI-Tooltip-Border", tile = true, tileSize = 16, edgeSize = 16, insets = { left = 4, right = 4, top = 4, bottom = 4 }})
-		--fb:SetNormalTexture("Interface\\ChatFrame\\UI-ChatIcon-ScrollDown-Up")
-		fb:SetHighlightTexture("Interface/Buttons/UI-Listbox-Highlight","ADD")
+
+		fb:SetHighlightTexture("Interface/Buttons/UI-Listbox-Highlight", "ADD")
+		offsety = offsety + buttonheight
+		if offsety > (menuheight - 50) then
+			offsety = buttonheight
+			offsetx = offsetx + fbwidth + 140
+		end
+		fb:SetPoint("TOPLEFT", offsetx, -20 - offsety)
+
 		--
 		fb.fs = fb:CreateFontString('$parenttext', "ARTWORK", "GameFontHighlightSmall")
 		fb.fs:SetText(val.text)
-		fb.fs:SetPoint("LEFT",0,0)
+		fb.fs:SetPoint("LEFT", 0, 0)
 		--
-		--fb.text = val.text
+		-- fb.text = val.text
 		fb.toggle = val.toggle
 		fb.slider = val.slider
 		fb.editbox = val.editbox
-		--fb.color = val.color
+		-- fb.color = val.color
 		fb.tooltip = val.tooltip
 		fb.reloadui = val.reloadui
 		fb.position = val.position
 		--
 		-- if fb.toggle, make a checkmark frame
 		if val.toggle then
-			fb.chk = CreateFrame("Frame","$parentCheckmark",fb)
+			fb.chk = CreateFrame("Frame", "$parentCheckmark", fb)
 			fb.chk:SetWidth(20)
 			fb.chk:SetHeight(20)
 			fb.chk.tex = fb.chk:CreateTexture()
@@ -486,22 +511,21 @@ function NotGrid:InitializeMenu()
 				fb.chk.tex:SetTexture("Interface/Buttons/UI-CheckBox-Check-Disabled")
 			end
 			fb.chk.tex:SetAllPoints()
-			fb.chk:SetPoint("RIGHT",fb,"LEFT",0,0)
+			fb.chk:SetPoint("RIGHT", fb, "LEFT", 0, 0)
 		end
 		if val.color then
-			fb.clr = CreateFrame("Button","$parentButton",fb)
+			fb.clr = CreateFrame("Button", "$parentButton", fb)
 			fb.clr.color = val.color
 			fb.clr:SetWidth(14)
 			fb.clr:SetHeight(14)
-			fb.clr:SetBackdrop({edgeFile = "Interface\\Buttons\\WHITE8X8", edgeSize = 1})
-			fb.clr:SetBackdropBorderColor(1,1,1,0.8)
+			fb.clr:SetBackdrop({ edgeFile = "Interface\\Buttons\\WHITE8X8", edgeSize = 1 })
+			fb.clr:SetBackdropBorderColor(1, 1, 1, 0.8)
 			fb.clr.tex = fb.clr:CreateTexture("$parentTexture")
 			fb.clr.tex:SetTexture("Interface\\ChatFrame\\ChatFrameColorSwatch")
 			fb.clr.tex:SetVertexColor(unpack(NotGridOptions[val.color.key]))
 			fb.clr.tex:SetAllPoints()
-			fb.clr:SetPoint("LEFT",fb,"RIGHT",0,0)
+			fb.clr:SetPoint("LEFT", fb, "RIGHT", 0, 0)
 			fb.clr:SetScript("OnClick", function()
-				--DEFAULT_CHAT_FRAME:AddMessage(NotGridOptions[this.color.key][1])
 				self:ClickColor()
 			end)
 		end
@@ -512,21 +536,22 @@ function NotGrid:InitializeMenu()
 					NotGridOptions[this.toggle] = false
 					fb.chk.tex:SetTexture("Interface/Buttons/UI-CheckBox-Check-Disabled")
 					if this.toggle == "borderartwork" then
-						NotGrid.o.unitbordercolor = {0,0,0,0.8}
+						NotGrid.o.unitbordercolor = { 0, 0, 0, 0.8 }
 						NotGrid.o.unitpadding = 2
 						NotGrid.o.unitborder = 2
 					end
+					NotGridOptionChange()
 				else
 					NotGridOptions[this.toggle] = true
 					fb.chk.tex:SetTexture("Interface/Buttons/UI-CheckBox-Check")
 					if this.toggle == "borderartwork" then
-						NotGrid.o.unitbordercolor = {0.8,0.8,0.8,1}
+						NotGrid.o.unitbordercolor = { 0.8, 0.8, 0.8, 1 }
 						NotGrid.o.unitpadding = -10
 						NotGrid.o.unitborder = 8
 					end
+					NotGridOptionChange()
+					NotGridMenuConflictHandler()
 				end
-				NotGridOptionChange()
-				NotGridMenuConflictHandler()
 			end
 			if this.reloadui then
 				ReloadUI()
@@ -537,15 +562,15 @@ function NotGrid:InitializeMenu()
 				--show them both
 			elseif this.editbox then
 				NotGridMenuEditBox.key = this.editbox.key
-				if type(NotGridOptions[this.editbox.key]) == "table" then -- for tracking icons
-					NotGridMenuEditBox:SetText(table.concat(NotGridOptions[this.editbox.key],"/")) -- gfind and table.concat seem to have problems with | character so we use /
+				if type(NotGridOptions[this.editbox.key]) == "table" then            -- for tracking icons
+					NotGridMenuEditBox:SetText(table.concat(NotGridOptions[this.editbox.key], "/")) -- gfind and table.concat seem to have problems with | character so we use /
 					NotGridMenuEditBox.istable = true
 				else
 					NotGridMenuEditBox:SetText(NotGridOptions[this.editbox.key])
 					NotGridMenuEditBox.istable = false
 				end
 				NotGridMenuEditBoxContainer:ClearAllPoints()
-				NotGridMenuEditBoxContainer:SetPoint("TOPRIGHT",this,"TOPLEFT",-20,0)
+				NotGridMenuEditBoxContainer:SetPoint("TOPRIGHT", this, "TOPLEFT", -20, 0)
 				NotGridMenuEditBoxContainer:Show()
 				--make sure slider is hidden
 				NotGridMenuSliderContainer:Hide()
@@ -564,7 +589,7 @@ function NotGrid:InitializeMenu()
 					NotGridMenuSlider.tooltip = this.slider.tooltip
 				end
 				NotGridMenuSliderContainer:ClearAllPoints()
-				NotGridMenuSliderContainer:SetPoint("TOPRIGHT",this,"TOPLEFT",-20,0)
+				NotGridMenuSliderContainer:SetPoint("TOPRIGHT", this, "TOPLEFT", -20, 0)
 				NotGridMenuSliderContainer:Show()
 				--make sure editbox is hidden
 				NotGridMenuEditBoxContainer:Hide()
@@ -579,7 +604,7 @@ function NotGrid:InitializeMenu()
 				NotGridMenuPositionBoxXeditbox:SetText(NotGridOptions[this.position.xkey])
 				NotGridMenuPositionBoxYeditbox:SetText(NotGridOptions[this.position.ykey])
 				NotGridMenuPositionBoxContainer:ClearAllPoints()
-				NotGridMenuPositionBoxContainer:SetPoint("TOPRIGHT",this,"TOPLEFT",-20,0)
+				NotGridMenuPositionBoxContainer:SetPoint("TOPRIGHT", this, "TOPLEFT", -20, 0)
 				NotGridMenuPositionBoxContainer:Show()
 				--
 				NotGridMenuSliderContainer:Hide()
@@ -609,17 +634,25 @@ end
 ------------
 
 function NotGrid:InitializeSlider()
-	local f = CreateFrame("Frame","NotGridMenuSliderContainer",NotGridOptionsMenu) -- slider container
+	local f = CreateFrame("Frame", "NotGridMenuSliderContainer", NotGridOptionsMenu) -- slider container
 	f:SetWidth(160)
 	f:SetHeight(50)
-	f:SetBackdrop({bgFile = "Interface/Tooltips/UI-Tooltip-Background", edgeFile = "Interface/Tooltips/UI-Tooltip-Border", tile = true, tileSize = 16, edgeSize = 16, insets = { left = 4, right = 4, top = 4, bottom = 4 }})
-	f:SetBackdropColor(0,0,0,1)
-	--f:SetBackdropBorderColor(unpack(o.unitbordercolor))
-	f:SetPoint("CENTER",UIParent,"CENTER",-100,0)
+	f:SetBackdrop({
+		bgFile = "Interface/Tooltips/UI-Tooltip-Background",
+		edgeFile = "Interface/Tooltips/UI-Tooltip-Border",
+		tile = true,
+		tileSize = 16,
+		edgeSize = 16,
+		insets = { left = 4, right = 4, top = 4, bottom = 4 }
+	})
+	f:SetBackdropColor(1, 0, 0, 1)
+	f:SetFrameLevel(10000)
+
+	f:SetPoint("CENTER", UIParent, "CENTER", -100, 0)
 	f:Hide()
 
 	f.s = CreateFrame('Slider', 'NotGridMenuSlider', f, 'OptionsSliderTemplate') -- its a child of the container frame
-	f.s:SetPoint("CENTER",0,0)
+	f.s:SetPoint("CENTER", 0, 0)
 	f.s:SetValueStep(1)
 
 	f.s:SetScript("OnValueChanged", function()
@@ -635,7 +668,7 @@ function NotGrid:InitializeSlider()
 	end)
 
 	f.s.currval = f.s:CreateFontString('$parentcurrval', "ARTWORK", "GameFontHighlightSmall")
-	f.s.currval:SetPoint("TOP",0,8)
+	f.s.currval:SetPoint("TOP", 0, 8)
 	f.s.currval:SetText("50")
 	f.s:SetScript("OnEnter", function()
 		if this.tooltip then
@@ -655,13 +688,21 @@ end
 -------------
 
 function NotGrid:InitializeEditBox()
-	local f = CreateFrame("Frame", "NotGridMenuEditBoxContainer",NotGridOptionsMenu)
+	local f = CreateFrame("Frame", "NotGridMenuEditBoxContainer", NotGridOptionsMenu)
 	f:SetWidth(350)
 	f:SetHeight(50)
-	f:SetBackdrop({bgFile = "Interface/Tooltips/UI-Tooltip-Background", edgeFile = "Interface/Tooltips/UI-Tooltip-Border", tile = true, tileSize = 16, edgeSize = 16, insets = { left = 4, right = 4, top = 4, bottom = 4 }})
-	f:SetBackdropColor(0,0,0,1)
-	--f:SetBackdropBorderColor(unpack(o.unitbordercolor))
-	f:SetPoint("CENTER",UIParent,"CENTER",-100,0)
+	f:SetBackdrop({
+		bgFile = "Interface/Tooltips/UI-Tooltip-Background",
+		edgeFile = "Interface/Tooltips/UI-Tooltip-Border",
+		tile = true,
+		tileSize = 16,
+		edgeSize = 16,
+		insets = { left = 4, right = 4, top = 4, bottom = 4 }
+	})
+	f:SetBackdropColor(1, 0, 0, 1)
+	f:SetFrameLevel(10000)
+
+	f:SetPoint("CENTER", UIParent, "CENTER", -100, 0)
 	f:Hide()
 
 	f.e = CreateFrame("EditBox", "NotGridMenuEditBox", f, "InputBoxTemplate")
@@ -669,13 +710,14 @@ function NotGrid:InitializeEditBox()
 	f.e:SetWidth(320)
 	f.e:SetHeight(40)
 	f.e:SetAutoFocus(false)
-	f.e:SetPoint("CENTER",0,0)
+	f.e:SetPoint("CENTER", 0, 0)
 	f.e:SetText("hey")
 	f.e:EnableKeyboard()
+
 	f.e:SetScript("OnEnterPressed", function()
 		this:ClearFocus()
 		if this.istable then
-			NotGridOptions[this.key] = {} -- should probably compost it but will rarely get called
+			NotGridOptions[this.key] = {}                 -- should probably compost it but will rarely get called
 			for text in string.gfind(this:GetText(), "([^/]+)") do -- There are issues with using | as a seperator, not sure why
 				table.insert(NotGridOptions[this.key], text)
 			end
@@ -687,7 +729,7 @@ function NotGrid:InitializeEditBox()
 	f.e:SetScript("OnEscapePressed", function()
 		this:ClearFocus()
 		if this.istable then
-			this:SetText(table.concat(NotGridOptions[this.key],"/"))
+			this:SetText(table.concat(NotGridOptions[this.key], "/"))
 		else
 			this:SetText(NotGridOptions[this.key])
 		end
@@ -699,39 +741,48 @@ end
 ----------------------
 
 function NotGrid:InitializePositionBox()
-	local f = CreateFrame("Frame", "NotGridMenuPositionBoxContainer",NotGridOptionsMenu)
+	local f = CreateFrame("Frame", "NotGridMenuPositionBoxContainer", NotGridOptionsMenu)
 	f:SetWidth(200)
 	f:SetHeight(100)
-	f:SetBackdrop({bgFile = "Interface/Tooltips/UI-Tooltip-Background", edgeFile = "Interface/Tooltips/UI-Tooltip-Border", tile = true, tileSize = 16, edgeSize = 16, insets = { left = 4, right = 4, top = 4, bottom = 4 }})
-	f:SetBackdropColor(0,0,0,1)
-	f:SetPoint("CENTER",UIParent,"CENTER",-100,0)
+	f:SetBackdrop({
+		bgFile = "Interface/Tooltips/UI-Tooltip-Background",
+		edgeFile = "Interface/Tooltips/UI-Tooltip-Border",
+		tile = true,
+		tileSize = 16,
+		edgeSize = 16,
+		insets = { left = 4, right = 4, top = 4, bottom = 4 }
+	})
+	f:SetBackdropColor(1, 0, 0, 1)
+	f:SetFrameLevel(10000)
+
+	f:SetPoint("CENTER", UIParent, "CENTER", -100, 0)
 	f:Hide()
 
 	f.upb = CreateFrame("Button", "NotGridMenuPositionBoxUpButton", f, "UIPanelButtonTemplate")
-	f.upb:SetPoint("CENTER",0,30)
+	f.upb:SetPoint("CENTER", 0, 30)
 	f.upb:SetText("^")
 
 	f.downb = CreateFrame("Button", "NotGridMenuPositionBoxDownButton", f, "UIPanelButtonTemplate")
-	f.downb:SetPoint("CENTER",0,-30)
+	f.downb:SetPoint("CENTER", 0, -30)
 	f.downb:SetText("v")
 
 	f.leftb = CreateFrame("Button", "NotGridMenuPositionBoxLeftButton", f, "UIPanelButtonTemplate")
-	f.leftb:SetPoint("CENTER",-80,0)
+	f.leftb:SetPoint("CENTER", -80, 0)
 	f.leftb:SetText("<")
 
 	f.rightb = CreateFrame("Button", "NotGridMenuPositionBoxRightButton", f, "UIPanelButtonTemplate")
-	f.rightb:SetPoint("CENTER",80,0)
+	f.rightb:SetPoint("CENTER", 80, 0)
 	f.rightb:SetText(">")
 
-	for k,v in {up = f.upb, down = f.downb, left = f.leftb, right = f.rightb} do
+	for k, v in { up = f.upb, down = f.downb, left = f.leftb, right = f.rightb } do
 		v.direction = k
 		v:SetWidth(20)
 		v:SetHeight(20)
 		v:SetScript("OnClick", function(self, button, down)
 			if this.direction == "up" or this.direction == "right" then
-				NotGridOptions[this.key] = NotGridOptions[this.key]+NotGrid:GetAdjustment()
+				NotGridOptions[this.key] = NotGridOptions[this.key] + NotGrid:GetAdjustment()
 			else
-				NotGridOptions[this.key] = NotGridOptions[this.key]-NotGrid:GetAdjustment()
+				NotGridOptions[this.key] = NotGridOptions[this.key] - NotGrid:GetAdjustment()
 			end
 			if this.direction == "up" or this.direction == "down" then
 				NotGridMenuPositionBoxYeditbox:SetText(NotGridOptions[this.key])
@@ -758,7 +809,7 @@ function NotGrid:InitializePositionBox()
 	f.ex:SetWidth(50)
 	f.ex:SetHeight(40)
 	f.ex:SetAutoFocus(false)
-	f.ex:SetPoint("CENTER",-30,0)
+	f.ex:SetPoint("CENTER", -30, 0)
 	f.ex:SetText("xx")
 	f.ex:EnableKeyboard()
 	f.ex:SetScript("OnEnterPressed", function()
@@ -777,7 +828,7 @@ function NotGrid:InitializePositionBox()
 	f.ey:SetWidth(50)
 	f.ey:SetHeight(40)
 	f.ey:SetAutoFocus(false)
-	f.ey:SetPoint("CENTER",30,0)
+	f.ey:SetPoint("CENTER", 30, 0)
 	f.ey:SetText("yy")
 	f.ey:EnableKeyboard()
 	f.ey:SetScript("OnEnterPressed", function()
@@ -815,12 +866,12 @@ function NotGrid:ClickColor()
 	workingcolorkey = this.color.key
 	--DEFAULT_CHAT_FRAME:AddMessage(workingcolorkey.." "..workingcolorswatch:GetName())
 	local r, g, b, a = unpack(NotGridOptions[workingcolorkey])
-	ColorPickerFrame.previousValues = {r, g, b, a}
+	ColorPickerFrame.previousValues = { r, g, b, a }
 	ColorPickerFrame.func = self.ColorPickerHandler
 	ColorPickerFrame.opacityFunc = self.ColorPickerHandler
 	ColorPickerFrame.cancelFunc = NotGrid_SetColor -- breaks if refrences notgrid
 	if a then
-		ColorPickerFrame.opacity = 1-a
+		ColorPickerFrame.opacity = 1 - a
 		ColorPickerFrame.hasOpacity = true -- opacity prob has own func
 	else
 		ColorPickerFrame.hasOpacity = false
@@ -832,43 +883,18 @@ end
 
 function NotGrid:ColorPickerHandler()
 	local a = 1 - OpacitySliderFrame:GetValue()
-	local r,g,b = ColorPickerFrame:GetColorRGB()
+	local r, g, b = ColorPickerFrame:GetColorRGB()
 	if ColorPickerFrame.hasOpacity then
-		NotGrid_SetColor({r,g,b,a})
+		NotGrid_SetColor({ r, g, b, a })
 	else
-		NotGrid_SetColor({r,g,b})
+		NotGrid_SetColor({ r, g, b })
 	end
 end
 
-function NotGrid_SetColor(vals) -- can be current vals or prevvals
+function NotGrid_SetColor(vals)         -- can be current vals or prevvals
 	workingcolorswatch:SetVertexColor(unpack(vals))
 	NotGridOptions[workingcolorkey] = vals -- table of colorvals
 	NotGridOptionChange()
-end
-
---------------------
--- Scroll Handler --
---------------------
-
-function NotGrid:ScrollHandler() --arg1 is either -1 or 1 depending on scolling down or up
-	if not arg1 then arg1 = 0 end
-	local menucount = getn(menuarray)
-	local offset = NotGridOptionsMenu.offset
-	offset = offset-arg1
-	if offset < 0 then offset = 0 end -- keep it from going below zero
-	if offset > menucount-numdisplay then offset = menucount-numdisplay end -- keep it from going above count
-	for key,_ in menuarray do
-		local f = getglobal("NotGridOptionsMenubutton"..key)
-		if (key > offset) and (key <= offset+numdisplay) then
-			f:SetPoint("TOP","NotGridOptionsMenu","TOP",0,-buttonheight*(key+1-offset)) -- its offset by two spaces at the top
-			f:Show()
-		else
-			f:Hide()
-			if f.slider then NotGridMenuSliderContainer:Hide() end
-			if f.editbox then NotGridMenuEditBoxContainer:Hide() end
-		end
-	end
-	NotGridOptionsMenu.offset = offset -- record it into the frame variable for reference
 end
 
 ----------------------
@@ -909,7 +935,7 @@ end
 
 function NotGridOptionChange()
 	NotGrid:ConfigUnitFrames()
-	for unitid,_ in NotGrid.UnitFrames do
+	for unitid, _ in NotGrid.UnitFrames do
 		NotGrid:UNIT_MAIN(unitid)
 		NotGrid:UNIT_BORDER(unitid)
 		NotGrid:UNIT_AURA(unitid)
